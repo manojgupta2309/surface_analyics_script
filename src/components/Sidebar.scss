@@ -1,6 +1,9 @@
 @import './colors.scss';
 
 .sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
     height: 100vh;
     background-color: $color-secondary; // Background color for the sidebar
     border-right: 1px solid $color-border;
