@@ -131,7 +131,7 @@ Example request body:
 
 ## Author
 
-👤 **Manoj Gupta**
+👤 [Manoj Gupta](mailto:gmanoj2310@gmail.com?subject=Your%20Subject%20Here)
 
 
 ## 🤝 Contributing
