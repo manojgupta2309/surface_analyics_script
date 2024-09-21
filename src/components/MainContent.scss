@@ -1,0 +1,129 @@
+@import './colors.scss';
+
+.main-content {
+  flex-grow: 1;
+  padding: 32px;
+  background-color: $color-white;
+
+  .main-heading {
+    margin-bottom: 16px;
+    color: $color-black;
+  }
+
+  .MuiAccordion-root {
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 16px;
+    border: 1px solid $color-table-border;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: $color-white;
+
+    .MuiAccordionSummary-root {
+      background-color: $color-white;
+    }
+
+    .MuiAccordionDetails-root {
+      background-color: $color-white;
+    }
+  }
+
+  .accordion-summary-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    .status-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      margin-right: 16px;
+
+      &.success {
+        color: $color-accent-success;
+      }
+
+      &.error {
+        color: $color-accent-error;
+      }
+    }
+
+    .accordion-title {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .analytics-info {
+        color: $color-gray;
+      }
+    }
+
+    .install-tag-button,
+    .test-tag-button {
+      margin-left: auto;
+      border-radius: 8px;
+      background-color: $color-primary;
+      text-transform: none;
+    }
+  }
+
+  .snippet-box {
+    background-color: $color-white;
+    padding: 16px;
+    border: 1px solid $color-table-border;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    .snippet-content {
+      background-color: $color-bg-snippet;
+      padding: 12px;
+      border-radius: 4px;
+      font-family: monospace;
+      white-space: pre-wrap;
+      overflow: auto; // Allow scrolling within snippet editor if needed
+    }
+
+    .test-connection {
+      margin-top: 16px;
+      margin-left: auto;
+    }
+    .try-again-button {
+      align-self: flex-end;
+      align-items: flex-end;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 16px;
+
+    .MuiAccordion-root {
+      width: 100%;
+    }
+  }
+
+  table {
+    width: 100%; // Make the table take full width
+    border-collapse: collapse; // Collapse borders for better spacing
+
+    th, td {
+      border-top: 4px solid $color-secondary;
+      border-bottom: 4px solid $color-secondary;
+      padding: 8px; // Add padding to cells
+      text-align: left; // Align text to the left
+    }
+
+    th {
+      font-weight: bold; // Make heading text bold
+      background-color: transparent; // Remove background color for headers
+    }
+
+    tr {
+      &:not(:last-child) {
+        border-bottom: 1px solid $color-black; // Add border only between rows
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+// _colors.scss
+
+// Primary Colors
+$color-primary: #2F64EE; // Blue
+$color-secondary: #f4f4f4; // Light Gray
+$color-accent-success: #4caf50; // Green
+$color-accent-error: #f44336; // Red
+
+// Neutral Colors
+$color-white: #ffffff;
+$color-black: #000000;
+$color-gray-light: #f0f0f0;
+$color-gray: #757575;
+$color-gray-dark: #5F6065;
+$color-border: #ddd;
+$color-table-border: #e0e0e0;
+
+// Text Colors
+$color-text-default: #000000;
+$color-text-muted: #757575;
+$color-text-selected: #ffffff;
+
+// Background Colors
+$color-bg-sidebar: $color-secondary;
+$color-bg-header: $color-white;
+$color-bg-main: $color-white;
+$color-bg-snippet: #f9f9f9;
+
+// Hover & Selected States
+$color-hover: rgba(0, 0, 0, 0.05);
+$color-selected-bg: #2c2c2c;
+
+// Shadows
+$shadow-default: 0 2px 4px rgba(0, 0, 0, 0.1);

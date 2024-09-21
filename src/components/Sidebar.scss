@@ -1,0 +1,95 @@
+@import './colors.scss';
+
+.sidebar {
+    height: 100vh;
+    background-color: $color-secondary; // Background color for the sidebar
+    border-right: 1px solid $color-border;
+  
+    .sidebar-header {
+      display: flex;
+      align-items: center;
+      padding: 16px;
+      background-color: $color-white; // Background for the header
+    }
+  
+    .logo {
+      font-weight: bold;
+      display: flex;
+      align-items: baseline;
+  
+      .logo-surface {
+        color: black; // Black color for "surface"
+      }
+  
+      .logo-labs {
+        color: $color-bg-sidebar; // White color for "labs"
+        background-color: blue; // Blue background for "labs"
+        padding: 0 4px; // Optional padding for better spacing
+        border-radius: 4px; // Optional rounded corners
+      }
+    }
+  
+    .sidebar-nav {
+      flex-grow: 1; // Allow the nav to take remaining space
+      overflow-y: auto; // Make it scrollable if content overflows
+  
+      .sidebar-item {
+        text-align: left; // Align text to the left
+        justify-content: flex-start; // Align items to the left
+        padding: 16px; // Add padding for better spacing
+  
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.05); // Optional hover effect
+        }
+      }
+  
+      .selected {
+        color: navy; // Change text color to navy for the selected item
+        font-weight: bold; // Optional: make it bold
+        background-color: $color-selected-bg; 
+        color:white;// Optional: background color for selected state
+      }
+    }
+  
+    .sidebar-footer {
+      padding: 16px;
+      background-color: $color-bg-sidebar; // Ensure background is same as header
+      margin-top: auto; // Push the footer to the bottom
+  
+      .profile {
+        display: flex;
+        align-items: center; // Center items vertically
+        margin-top: 16px; // Add margin on top
+  
+        .profile-pic {
+          width: 40px; // Adjust size as needed
+          height: 40px; // Adjust size as needed
+          border-radius: 50%; // Make it circular
+          margin-right: 12px; // Space between picture and text
+        }
+  
+        .full-name {
+          font-weight: bold; // Bold for full name
+          color: black; // Change full name text to black
+        }
+  
+        .email {
+          color: gray; // Faint color for email
+        }
+      }
+    }
+  
+    // Remove border and shadow from accordion
+    .MuiAccordion-root {
+      box-shadow: none; // Remove shadow
+      border: none; // Remove border
+      background-color: $color-bg-sidebar;
+      
+    }
+  
+    // Set accordion background to white
+    .MuiAccordionDetails-root {
+      background-color: $color-bg-sidebar; // Set background color to white
+    }
+  }
+  

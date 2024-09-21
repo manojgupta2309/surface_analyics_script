@@ -1,0 +1,32 @@
+@import './colors.scss';
+
+.container {
+  display: flex;
+}
+
+.line-numbers {
+  padding: 10px;
+  background-color: $color-gray-light;
+  text-align: right;
+  user-select: none;
+  overflow-y: hidden;
+}
+
+.line-numbers div {
+  height: 20px; /* Adjust based on the line height of the textarea */
+}
+
+.textarea {
+  flex-grow: 1;
+  padding: 10px;
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 20px; /* Match this with the line height of the line numbers */
+  border: none;
+  outline: none;
+  color: $color-gray-dark;
+  background-color: $color-bg-snippet;
+  color: #000;
+  resize: none;
+  overflow-y: auto;
+}

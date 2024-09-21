@@ -1,0 +1,265 @@
+// styles.scss
+
+// Import the common color variables
+@import './colors.scss';
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw; // Full width of viewport
+
+  // Sidebar styling
+  // .sidebar {
+  //   display: flex;
+  //   flex-direction: column;
+  //   width: 250px;
+  //   background-color: $color-sidebar-bg;
+  //   border-right: 1px solid $color-border;
+
+  //   .sidebar-header {
+  //     display: flex;
+  //     align-items: center;
+  //     padding: 16px;
+  //     background-color: $color-white;
+  //   }
+
+  //   .logo {
+  //     font-weight: bold;
+  //     display: flex;
+  //     align-items: baseline;
+
+  //     .logo-surface {
+  //       color: $color-black; // Black color for "surface"
+  //     }
+
+  //     .logo-labs {
+  //       color: $color-white; // White color for "labs"
+  //       background-color: $color-blue; // Blue background for "labs"
+  //       padding: 0 4px; // Optional padding for better spacing
+  //       border-radius: 4px; // Optional rounded corners
+  //     }
+  //   }
+
+  //   .sidebar-nav {
+  //     flex-grow: 1; // Allow the nav to take remaining space
+  //     overflow-y: auto; // Make it scrollable if content overflows
+
+  //     .sidebar-item {
+  //       text-align: left; // Align text to the left
+  //       justify-content: flex-start; // Align items to the left
+  //       padding: 16px; // Add padding for better spacing
+
+  //       &:hover {
+  //         background-color: rgba(0, 0, 0, 0.05); // Optional hover effect
+  //       }
+  //     }
+
+  //     .selected {
+  //       color: $color-selected-text; // Change text color to white for the selected item
+  //       font-weight: bold; // Optional: make it bold
+  //       background-color: $color-selected-bg; // Background color for selected state
+  //     }
+  //   }
+
+  //   .sidebar-footer {
+  //     padding: 16px;
+  //     background-color: $color-sidebar-bg; // Ensure background is same as header
+  //     margin-top: auto; // Push the footer to the bottom
+
+  //     .profile {
+  //       display: flex;
+  //       align-items: center; // Center items vertically
+  //       margin-top: 16px; // Add margin on top
+
+  //       .profile-pic {
+  //         width: 40px; // Adjust size as needed
+  //         height: 40px; // Adjust size as needed
+  //         border-radius: 50%; // Make it circular
+  //         margin-right: 12px; // Space between picture and text
+  //       }
+
+  //       .full-name {
+  //         font-weight: bold; // Bold for full name
+  //         color: $color-black; // Change full name text to black
+  //       }
+
+  //       .email {
+  //         color: $color-gray; // Faint color for email
+  //       }
+  //     }
+  //   }
+
+  //   // Remove border and shadow from accordion
+  //   .MuiAccordion-root {
+  //     box-shadow: none; // Remove shadow
+  //     border: none; // Remove border
+  //     background-color: $color-sidebar-bg;
+  //   }
+
+  //   // Set accordion background to sidebar background color
+  //   .MuiAccordionDetails-root {
+  //     background-color: $color-sidebar-bg; // Set background color to sidebar background
+  //   }
+  // }
+
+  // Main content area grows to fill the rest of the screen
+  .main-content {
+    flex-grow: 1;
+    padding: 32px;
+    background-color: $color-main-bg;
+
+    .main-heading {
+      margin-bottom: 16px;
+      color: $color-black;
+    }
+
+    .MuiAccordion-root {
+      width: 100%;
+      margin-bottom: 16px;
+      padding: 16px;
+      border: 1px solid $color-border-e0e0e0;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px $color-box-shadow;
+      background-color: $color-main-bg;
+
+      .MuiAccordionSummary-root {
+        background-color: $color-main-bg;
+      }
+
+      .MuiAccordionDetails-root {
+        background-color: $color-main-bg;
+      }
+    }
+
+    .accordion-summary-content {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      .status-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        margin-right: 16px;
+
+        &.success {
+          color: $color-success;
+        }
+
+        &.error {
+          color: $color-error;
+        }
+      }
+
+      .accordion-title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .analytics-info {
+          color: $color-analytics-info;
+        }
+      }
+
+      .install-tag-button,
+      .test-tag-button {
+        margin-left: auto;
+        border-radius: 8px;
+        background-color: $color-primary;
+        text-transform: none;
+      }
+    }
+
+    .snippet-box {
+      background-color: $color-main-bg;
+      padding: 16px;
+      border: 1px solid $color-border-e0e0e0;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px $color-box-shadow;
+
+      .snippet-content {
+        background-color: $color-snippet-bg;
+        padding: 12px;
+        border-radius: 4px;
+        font-family: monospace;
+        white-space: pre-wrap;
+        overflow: auto; // Allow scrolling within snippet editor if needed
+      }
+
+      .test-connection {
+        margin-top: 16px;
+        margin-left: auto;
+      }
+
+      .try-again-button {
+        align-self: flex-end;
+        align-items: flex-end;
+      }
+    }
+
+    @media (max-width: 768px) {
+      padding: 16px;
+
+      .MuiAccordion-root {
+        width: 100%;
+      }
+    }
+
+    table {
+      width: 100%; // Make the table take full width
+      border-collapse: collapse; // Collapse borders for better spacing
+
+      th,
+      td {
+        border-top: 4px solid $color-line-numbers-bg;
+        border-bottom: 4px solid $color-line-numbers-bg;
+        padding: 8px; // Add padding to cells
+        text-align: left; // Align text to the left
+      }
+
+      th {
+        font-weight: bold; // Make heading text bold
+        background-color: transparent; // Remove background color for headers
+      }
+
+      tr {
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-black; // Add border only between rows
+        }
+      }
+    }
+  }
+
+  .container {
+    display: flex;
+  }
+
+  .line-numbers {
+    padding: 10px;
+    background-color: $color-line-numbers-bg;
+    text-align: right;
+    user-select: none;
+    overflow-y: hidden;
+
+    div {
+      height: 20px; // Adjust based on the line height of the textarea
+    }
+  }
+
+  .textarea {
+    flex-grow: 1;
+    padding: 10px;
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 20px; // Match this with the line height of the line numbers
+    border: none;
+    outline: none;
+    color: $color-black;
+    background-color: $color-snippet-bg;
+    resize: none;
+    overflow-y: auto;
+  }
+}
